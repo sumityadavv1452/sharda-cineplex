@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Gallery | Sharda Cineplex Gola Bazar</title>
+  <meta name="description" content="Take a visual tour inside Sharda Cineplex in Gola Bazar, Gorakhpur. View images of our screens, comfortable seats, snacks counter, and lobby.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Devanagari:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="bg-bg-primary text-text-primary relative font-sans">
+
+  <!-- Vintage Film Grain Overlay -->
+  <div class="film-grain"></div>
+
+  <!-- 🍿 STICKY GLASS HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-[1000] border-b-0 transition-all duration-300">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white transition-colors duration-300">
+          <span class="text-xl">🎬</span>
+        </div>
+        <div class="text-left leading-none">
+          <span class="text-2xl font-anton tracking-wide text-white block">SHARDA</span>
+          <span class="text-[10px] block text-primary font-bold tracking-[4px] uppercase mt-0.5">CINEPLEX</span>
+        </div>
+      </a>
+
+      <!-- Center: Nav links -->
+      <nav class="hidden md:flex items-center gap-9 text-sm font-medium">
+        <a href="/" class="text-text-secondary hover:text-white transition-colors">Home</a>
+        <a href="/now-showing.html" class="text-text-secondary hover:text-white transition-colors">Now Showing</a>
+        <a href="/showtimes.html" class="text-text-secondary hover:text-white transition-colors">Showtimes</a>
+        <a href="/about.html" class="text-text-secondary hover:text-white transition-colors">Our Legacy</a>
+        <a href="/gallery.html" class="text-accent hover:text-accent transition-colors">Gallery</a>
+        <a href="/contact.html" class="text-text-secondary hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:09651249244" class="text-text-secondary hover:text-white transition-colors flex items-center gap-2 text-xs font-semibold">
+          <i data-lucide="phone" class="w-4 h-4 text-text-secondary"></i>
+          09651249244
+        </a>
+        <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-2.5 px-5 rounded-[8px] tracking-[0.5px] transition-all duration-300 flex items-center gap-2 hover:scale-[1.02]">
+          <i data-lucide="ticket" class="w-4 h-4"></i>
+          BOOK ON BMS
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white hover:text-primary focus:outline-none" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 top-[72px] bg-bg-primary/98 z-40 flex-col items-center justify-center space-y-6 text-xl font-bold tracking-wider text-text-primary transition-all duration-300">
+      <a href="/" class="text-text-secondary hover:text-white">Home</a>
+      <a href="/now-showing.html" class="text-text-secondary hover:text-white">Now Showing</a>
+      <a href="/showtimes.html" class="text-text-secondary hover:text-white">Showtimes</a>
+      <a href="/about.html" class="text-text-secondary hover:text-white">Our Legacy</a>
+      <a href="/gallery.html" class="text-accent hover:text-accent">Gallery</a>
+      <a href="/contact.html" class="text-text-secondary hover:text-white">Contact</a>
+      <div class="pt-6 flex flex-col items-center gap-4 w-full px-8">
+        <a href="tel:09651249244" class="flex items-center gap-2 text-sm text-text-secondary font-sans font-semibold">
+          <i data-lucide="phone" class="w-4 h-4 text-accent"></i> Call Now: 09651249244
+        </a>
+        <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-xl text-sm font-sans flex items-center justify-center gap-2">
+          <i data-lucide="ticket" class="w-4 h-4"></i> Book on BookMyShow
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🍿 GALLERY PAGE BANNER -->
+  <section class="pt-32 pb-12 bg-bg-secondary border-b border-white/5">
+    <div class="content-container text-left">
+      <span class="text-xs font-bold font-sans tracking-[2px] text-accent uppercase bg-accent/10 px-3 py-1.5 rounded-md">Visual Tour</span>
+      <h1 class="text-5xl md:text-6xl font-anton tracking-wide text-white mt-4 uppercase">Interior Gallery</h1>
+      <div class="w-16 h-[3px] bg-primary my-4 rounded-full"></div>
+      <p class="text-text-secondary max-w-xl text-sm md:text-base leading-relaxed">
+        Explore images showing the design and comfort upgrades made across Sharda Cineplex Gola.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🍿 MASONRY BENTO GRID SECTION -->
+  <section class="py-20 animate-on-scroll">
+    <div class="content-container">
+      <div class="flex flex-col gap-6">
+        
+        <!-- Bento Block 1 -->
+        <div class="flex flex-col md:flex-row gap-6 tilt-card-container">
+          <!-- Main Cell (60% width, ~420px height) -->
+          <div class="w-full md:w-[60%] h-[320px] md:h-[420px] bento-item tilt-card glow-card">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800" alt="Main Cinema Hall Screen">
+            <div class="bento-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-left z-10">
+              <h3 class="font-anton text-xl tracking-wide text-white uppercase">Main Screen & Acoustics</h3>
+              <p class="text-xs text-text-secondary mt-1 font-sans">Newly upgraded high-gain wide aspect screen setup.</p>
+            </div>
+          </div>
+
+          <!-- Right Column (40% width, 2 stacked items) -->
+          <div class="w-full md:w-[40%] flex flex-col gap-6">
+            <div class="h-[202px] bento-item tilt-card glow-card">
+              <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&q=80&w=800" alt="Plush seats">
+              <div class="bento-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-left z-10">
+                <h3 class="font-anton text-base tracking-wide text-white uppercase">Plush Premium Seating</h3>
+                <p class="text-xs text-text-secondary mt-1 font-sans">Thick cushioned, ergonomic layout with wide legroom.</p>
+              </div>
+            </div>
+            <div class="h-[202px] bento-item tilt-card glow-card">
+              <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&q=80&w=800" alt="Popcorn stand">
+              <div class="bento-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-left z-10">
+                <h3 class="font-anton text-base tracking-wide text-white uppercase">Concession Food Stand</h3>
+                <p class="text-xs text-text-secondary mt-1 font-sans">Fresh tub popcorn, cold drinks, samosas, and snacks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Block 2 (Reversed side layout for visual variation) -->
+        <div class="flex flex-col md:flex-row gap-6 tilt-card-container">
+          <!-- Left Column (40% width, 2 stacked items) -->
+          <div class="w-full md:w-[40%] flex flex-col gap-6 order-2 md:order-1">
+            <div class="h-[202px] bento-item tilt-card glow-card">
+              <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800" alt="Projectors">
+              <div class="bento-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-left z-10">
+                <h3 class="font-anton text-base tracking-wide text-white uppercase">High Definition Projectors</h3>
+                <p class="text-xs text-text-secondary mt-1 font-sans">Crystal clear imagery mapping every single frame block.</p>
+              </div>
+            </div>
+            <div class="h-[202px] bento-item tilt-card glow-card">
+              <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&q=80&w=800" alt="Ambient lights">
+              <div class="bento-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-left z-10">
+                <h3 class="font-anton text-base tracking-wide text-white uppercase">Ambient Marquee Lights</h3>
+                <p class="text-xs text-text-secondary mt-1 font-sans">Vintage marquee light bulb styling for nostalgia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Cell (60% width, ~420px height) -->
+          <div class="w-full md:w-[60%] h-[320px] md:h-[420px] bento-item tilt-card glow-card order-1 md:order-2">
+            <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&q=80&w=800" alt="Lobby entrance">
+            <div class="bento-overlay"></div>
+            <div class="absolute bottom-6 left-6 text-left z-10">
+              <h3 class="font-anton text-xl tracking-wide text-white uppercase">Main Entrance Ticket Window</h3>
+              <p class="text-xs text-text-secondary mt-1 font-sans">Easy walkup ticket purchase counters and banners.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 FOOTER — REDESIGN -->
+  <footer class="bg-[#0A0A0A] border-t border-white/[0.06] pt-12 pb-6 relative z-20">
+    <div class="content-container">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-12">
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <a href="/" class="flex items-center gap-2.5 group">
+            <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white">
+              <span class="text-sm">🎬</span>
+            </div>
+            <div class="leading-none">
+              <span class="text-lg font-anton tracking-wide text-white block uppercase">SHARDA</span>
+              <span class="text-[8px] block text-primary font-bold tracking-[3px] uppercase mt-0.5">CINEPLEX</span>
+            </div>
+          </a>
+          <p class="text-text-muted text-xs leading-relaxed max-w-[280px]">
+            Gola Bazar's Premier Cinema Experience
+          </p>
+          <a href="https://www.instagram.com/shardacineplex/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-white transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4 text-primary"></i>
+            <span>@shardacineplex</span>
+          </a>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-bold text-[#555] tracking-[2px] uppercase font-sans">Quick Links</h4>
+          <ul class="grid grid-cols-2 gap-2 text-xs font-semibold text-text-secondary">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/now-showing.html" class="hover:text-white transition-colors">Now Showing</a></li>
+            <li><a href="/showtimes.html" class="hover:text-white transition-colors">Showtimes</a></li>
+            <li><a href="/about.html" class="hover:text-white transition-colors">Our Legacy</a></li>
+            <li><a href="/gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+            <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-bold text-[#555] tracking-[2px] uppercase font-sans">Contact</h4>
+          <div class="text-xs text-text-secondary space-y-2 leading-relaxed">
+            <div class="flex flex-col font-mono text-accent">
+              <a href="tel:09651249244" class="hover:underline">09651249244</a>
+              <a href="tel:07236002626" class="hover:underline">07236002626</a>
+            </div>
+            <p>Main Market Road, Gola Bazar, Gorakhpur, UP</p>
+            <p class="text-text-muted text-[11px]">Daily: 9:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="pt-8 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between text-xs text-[#555555]">
+        <p>© 2026 Sharda Cineplex. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Made with ❤️ for Gola Bazar</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🍿 FLOATING ELEMENTS -->
+  <!-- WhatsApp Fixed CTA -->
+  <a href="https://wa.me/919651249244" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] hover:scale-105 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[999] transition-transform duration-300" style="animation: pulse 2s infinite;" aria-label="Contact WhatsApp">
+    <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.66.986 3.285 1.503 5.34 1.505 5.575 0 10.118-4.516 10.12-10.066.002-2.688-1.043-5.216-2.946-7.12-1.902-1.904-4.43-2.951-7.126-2.952-5.582 0-10.125 4.516-10.128 10.068-.001 2.07.54 4.08 1.565 5.867L1.998 22.1l5.857-1.535l-.04.025zm11.758-7.79c-.31-.154-1.83-.9-2.11-.998-.28-.1-.485-.15-.69.154-.203.308-.79.997-.97 1.205-.18.205-.357.228-.667.074-1.05-.525-1.812-.916-2.528-2.146-.62-1.07-.9-1.636-1.077-1.942-.178-.308-.02-.47.135-.623.14-.136.31-.358.463-.538.15-.178.203-.306.304-.51.1-.205.05-.383-.025-.536-.076-.154-.69-1.66-.945-2.27-.248-.597-.5-.516-.69-.526-.178-.008-.383-.01-.587-.01-.204 0-.536.077-.817.384-.28.307-1.073 1.05-1.073 2.56 0 1.51 1.1 2.97 1.25 3.177.153.205 2.164 3.31 5.244 4.634.733.315 1.306.503 1.753.644.736.233 1.407.2 1.937.12.59-.09 1.83-.746 2.088-1.432.257-.686.257-1.275.18-1.396-.076-.12-.28-.194-.59-.348z"/>
+    </svg>
+  </a>
+
+  <!-- Scroll-to-top Button -->
+  <button id="back-to-top" class="fixed bottom-24 right-7 bg-white/[0.08] hover:bg-white/[0.12] border border-white/10 hover:border-white/20 w-11 h-11 rounded-full text-white flex items-center justify-center shadow-2xl cursor-pointer opacity-0 pointer-events-none transition-all duration-300 z-40 hover:-translate-y-1" aria-label="Back to Top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Mobile sticky bottom bar -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#070708]/95 border-t border-white/[0.08] backdrop-blur-md p-3 flex gap-3 h-16">
+    <a href="tel:09651249244" class="w-1/4 bg-[#16161A] hover:bg-[#1C1C22] text-white py-3 rounded-lg text-center flex items-center justify-center border border-white/10">
+      <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+    </a>
+    <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="w-3/4 bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+      🎟️ BOOK ON BMS
+    </a>
+  </div>
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

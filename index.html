@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharda Cineplex | Movie Theater in Gola Bazar, Gorakhpur</title>
+  <meta name="description" content="Sharda Cineplex in Gola Bazar, Gorakhpur is back! Experience the magic of movies with upgraded Dolby sound & comfortable seating. Book tickets now on BookMyShow.">
+  <meta name="keywords" content="Sharda Cinema, Gola Cinema, Gorakhpur cinema, movie theater Gola Bazar, Sharda Cineplex, movies near me Gorakhpur">
+  
+  <!-- OG Tags -->
+  <meta property="og:title" content="Sharda Cineplex — Gola's Cinema is Back!">
+  <meta property="og:description" content="Watch the latest movies right here in Gola Bazar. Upgraded seats, Dolby-quality sound, and direct BookMyShow booking.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=1200">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Devanagari:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="bg-bg-primary text-text-primary relative font-sans">
+
+  <!-- Vintage Film Grain Overlay -->
+  <div class="film-grain"></div>
+
+  <!-- Theater Velvet Curtain Intro Screen -->
+  <div class="curtain-container">
+    <div class="curtain-panel curtain-left flex-1"></div>
+    <div class="curtain-panel curtain-right flex-1"></div>
+    <div class="curtain-logo">
+      <h1 class="text-5xl md:text-7xl font-anton text-accent tracking-wider uppercase">SHARDA CINEPLEX</h1>
+      <div class="w-24 h-[3px] bg-primary mx-auto my-4 rounded-full"></div>
+      <p class="text-text-secondary font-sans uppercase tracking-[4px] text-xs md:text-sm">Ab Picture Dekhne Ka Mazaa Aayega!</p>
+    </div>
+  </div>
+
+  <!-- 🍿 NAVBAR — FULL REDESIGN -->
+  <header class="fixed top-0 left-0 right-0 z-[1000] border-b-0 transition-all duration-300">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white transition-colors duration-300">
+          <span class="text-xl">🎬</span>
+        </div>
+        <div class="text-left leading-none">
+          <span class="text-2xl font-anton tracking-wide text-white block">SHARDA</span>
+          <span class="text-[10px] block text-primary font-bold tracking-[4px] uppercase mt-0.5">CINEPLEX</span>
+        </div>
+      </a>
+
+      <!-- Center: Nav links -->
+      <nav class="hidden md:flex items-center gap-9 text-sm font-medium">
+        <a href="/" class="text-accent hover:text-white transition-colors">Home</a>
+        <a href="/now-showing.html" class="text-text-secondary hover:text-white transition-colors">Now Showing</a>
+        <a href="/showtimes.html" class="text-text-secondary hover:text-white transition-colors">Showtimes</a>
+        <a href="/about.html" class="text-text-secondary hover:text-white transition-colors">Our Legacy</a>
+        <a href="/gallery.html" class="text-text-secondary hover:text-white transition-colors">Gallery</a>
+        <a href="/contact.html" class="text-text-secondary hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:09651249244" class="text-text-secondary hover:text-white transition-colors flex items-center gap-2 text-xs font-semibold">
+          <i data-lucide="phone" class="w-4 h-4 text-text-secondary"></i>
+          09651249244
+        </a>
+        <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-2.5 px-5 rounded-[8px] tracking-[0.5px] transition-all duration-300 flex items-center gap-2 hover:scale-[1.02]">
+          <i data-lucide="ticket" class="w-4 h-4"></i>
+          BOOK ON BMS
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white hover:text-primary focus:outline-none" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 top-[72px] bg-bg-primary/98 z-40 flex-col items-center justify-center space-y-6 text-xl font-bold tracking-wider text-text-primary transition-all duration-300">
+      <a href="/" class="text-accent hover:text-white">Home</a>
+      <a href="/now-showing.html" class="text-text-secondary hover:text-white">Now Showing</a>
+      <a href="/showtimes.html" class="text-text-secondary hover:text-white">Showtimes</a>
+      <a href="/about.html" class="text-text-secondary hover:text-white">Our Legacy</a>
+      <a href="/gallery.html" class="text-text-secondary hover:text-white">Gallery</a>
+      <a href="/contact.html" class="text-text-secondary hover:text-white">Contact</a>
+      <div class="pt-6 flex flex-col items-center gap-4 w-full px-8">
+        <a href="tel:09651249244" class="flex items-center gap-2 text-sm text-text-secondary font-sans font-semibold">
+          <i data-lucide="phone" class="w-4 h-4 text-accent"></i> Call Now: 09651249244
+        </a>
+        <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-xl text-sm font-sans flex items-center justify-center gap-2">
+          <i data-lucide="ticket" class="w-4 h-4"></i> Book on BookMyShow
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🍿 HERO SECTION — FULL REDESIGN -->
+  <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#070708]">
+    <!-- Ambient back-glow -->
+    <div class="cinematic-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-60"></div>
+
+
+
+    <!-- Projector Beam light cones -->
+    <div class="projector-beam"></div>
+
+    <!-- Background radial gradient -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(229,9,20,0.08) 0%, transparent 70%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 max-w-[1280px] mx-auto px-4 text-center mt-12 flex flex-col items-center">
+      <!-- Top badge -->
+      <div class="hero-badge inline-flex items-center gap-2.5 bg-primary/15 border border-primary/30 rounded-full px-4 py-1.5 mb-6">
+        <span class="pulsing-dot"></span>
+        <span class="text-[11px] font-bold tracking-[2px] uppercase text-primary font-sans">GRAND REOPENED & UPGRADED</span>
+      </div>
+
+      <!-- Hindi Headline -->
+      <h2 class="hero-hindi text-4xl sm:text-6xl md:text-[64px] font-deva text-accent font-bold leading-normal mb-3">
+        गोला की शान वापस आ गई
+      </h2>
+
+      <!-- English Headline -->
+      <h1 class="hero-title text-5xl sm:text-7xl md:text-[96px] font-anton text-white tracking-[-1px] leading-[0.9] mb-6 uppercase">
+        SHARDA CINEPLEX
+      </h1>
+
+      <!-- Subtext -->
+      <p class="hero-sub text-base sm:text-lg text-text-secondary max-w-[520px] mx-auto leading-relaxed mb-3">
+        Gola Bazar's beloved cinema is reborn — upgraded with a crystal-clear screen, immersive sound, and premium seating. Relive the magic of movies.
+      </p>
+
+      <!-- Tagline -->
+      <p class="hero-sub text-[13px] font-bold text-accent tracking-wide mb-10">
+        ⚡ Experience the Magic of Dolby Sound
+      </p>
+
+      <!-- CTA buttons row -->
+      <div class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+        <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary hover:bg-primary-dark button-glow-primary text-white font-bold py-4 px-9 rounded-[10px] transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 text-sm tracking-[0.5px]">
+          🎟️ BOOK TICKETS NOW
+        </a>
+        <a href="#now-screening" class="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white font-bold py-4 px-9 rounded-[10px] border border-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center gap-2 text-sm tracking-[0.5px]">
+          VIEW TODAY'S SHOWS
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll down mouse indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center gap-2.5">
+      <div class="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
+        <div class="w-1 h-2 bg-primary rounded-full animate-bounce"></div>
+      </div>
+      <span class="text-[10px] text-text-muted font-bold tracking-[2px] uppercase">SCROLL DOWN</span>
+    </div>
+  </section>
+
+  <!-- 🍿 MARQUEE TICKER — REDESIGN -->
+  <section class="bg-primary h-11 overflow-hidden flex items-center relative z-20">
+    <div class="animate-marquee whitespace-nowrap text-white font-bold text-xs tracking-[1.5px] uppercase flex items-center gap-6">
+      <span id="marquee-scroller-text"></span>
+    </div>
+  </section>
+
+  <!-- 🍿 NOW SCREENING — FULL REDESIGN -->
+  <section id="now-screening" class="py-[60px] lg:py-[100px] bg-[#070708] relative z-20">
+    <div class="content-container">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-anton tracking-wide text-white uppercase">NOW SCREENING</h2>
+        <div class="w-12 h-[3px] bg-primary mx-auto my-3.5 rounded-full"></div>
+        <p class="text-text-secondary max-w-[500px] mx-auto text-sm md:text-base leading-relaxed">
+          Catch the latest blockbuster releases screening today. Click tickets below to book instantly on BookMyShow.
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="today-shows-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tilt-card-container">
+        <!-- Injected dynamic content here by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 FEATURED SCREENING — REDESIGN -->
+  <section id="featured-movie-section" class="py-[60px] lg:py-[100px] bg-[#0F0F11] border-y border-white/5 relative z-20">
+    <!-- Injected dynamically by main.js (reversed 2-col layout) -->
+  </section>
+
+  <!-- 🍿 OUR LEGACY SECTION — REDESIGN -->
+  <section class="py-[60px] lg:py-[100px] bg-[#070708] relative z-20">
+    <div class="content-container">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <!-- Left: Text -->
+        <div class="w-full lg:w-[55%] text-left space-y-6">
+          <div class="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-1.5">
+            <span class="pulsing-dot" style="background-color: #F5C518;"></span>
+            <span class="text-[11px] font-bold tracking-[2px] uppercase text-accent font-sans">OUR LEGACY & RELAUNCH</span>
+          </div>
+          
+          <h2 class="text-5xl md:text-[64px] font-anton text-white tracking-wide uppercase leading-[0.95]">
+            YOUR CINEMA.<br>YOUR HERITAGE.
+          </h2>
+          
+          <div class="w-12 h-[3px] bg-primary rounded-full"></div>
+          
+          <p class="text-text-secondary leading-[1.8] text-sm md:text-base">
+            Sharda Cinema has been a cornerstone of Gola Bazar's community for generations, serving as the birthplace of cherished family movie outings.
+          </p>
+          <p class="text-text-secondary leading-[1.8] text-sm md:text-base">
+            We have completely rebuilt the theater from the ground up as <strong class="text-white">Sharda Cineplex</strong>. We have upgraded the screens, installed high-fidelity audio systems, and introduced plush cushioned seating to provide a premium cinematic experience—right here in Gola.
+          </p>
+          
+          <!-- Stats Row -->
+          <div class="stats-row grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/5">
+            <div class="stat-item bg-white/[0.03] border border-white/5 rounded-xl p-4 sm:p-5 flex flex-col gap-1 hover:border-color-brand-hover transition-colors">
+              <span class="text-3xl font-anton text-accent leading-none">3.8★</span>
+              <span class="text-[11px] font-bold text-[#555] tracking-wider uppercase font-sans">170+ Reviews</span>
+            </div>
+            <div class="stat-item bg-white/[0.03] border border-white/5 rounded-xl p-4 sm:p-5 flex flex-col gap-1 hover:border-color-brand-hover transition-colors">
+              <span class="text-3xl font-anton text-accent leading-none">4+</span>
+              <span class="text-[11px] font-bold text-[#555] tracking-wider uppercase font-sans">Shows Daily</span>
+            </div>
+            <div class="stat-item bg-white/[0.03] border border-white/5 rounded-xl p-4 sm:p-5 flex flex-col gap-1 hover:border-color-brand-hover transition-colors">
+              <span class="text-3xl font-anton text-accent leading-none">DOLBY</span>
+              <span class="text-[11px] font-bold text-[#555] tracking-wider uppercase font-sans">Audio Setup</span>
+            </div>
+            <div class="stat-item bg-white/[0.03] border border-white/5 rounded-xl p-4 sm:p-5 flex flex-col gap-1 hover:border-color-brand-hover transition-colors">
+              <span class="text-3xl font-anton text-accent leading-none">GOLA</span>
+              <span class="text-[11px] font-bold text-[#555] tracking-wider uppercase font-sans">Location</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="/about.html" class="inline-flex items-center gap-2 text-accent hover:underline font-bold transition-colors text-sm">
+              Read Our Renovation Story →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Image Frame -->
+        <div class="w-full lg:w-[45%] flex justify-center">
+          <div class="relative w-full max-w-md aspect-video sm:aspect-square rounded-[20px] overflow-hidden bg-bg-card border border-white/10 hover:border-color-brand-hover transition-colors flex items-center justify-center group" style="box-shadow: 0 0 60px rgba(229,9,20,0.08);">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800" alt="Renovated Cinema interior" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 THE EXPERIENCE — FULL REDESIGN -->
+  <section id="the-experience" class="py-[60px] lg:py-[100px] bg-[#0F0F11] border-y border-white/5 relative z-20">
+    <div class="content-container">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-anton tracking-wide text-white uppercase">THE EXPERIENCE</h2>
+        <div class="w-12 h-[3px] bg-primary mx-auto my-3.5 rounded-full"></div>
+        <p class="text-text-secondary max-w-[500px] mx-auto text-sm md:text-base leading-relaxed">
+          We have upgraded everything to offer Gorakhpur-standard multiplex quality in the heart of Gola Bazar.
+        </p>
+      </div>
+
+      <!-- 6 Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tilt-card-container">
+        <!-- 1 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-[56px] h-[56px] bg-primary/10 border border-primary/20 rounded-[14px] flex items-center justify-center text-[26px]">
+            🔊
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">Dolby-Quality Sound</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            Upgraded surround audio. Hear every whisper and explosion with crystal clarity.
+          </p>
+        </div>
+        <!-- 2 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-[56px] h-[56px] bg-primary/10 border border-primary/20 rounded-[14px] flex items-center justify-center text-[26px]">
+            🪑
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">Renovated Seating</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            Fully refurbished seats with back support. Pure comfort from first frame to last.
+          </p>
+        </div>
+        <!-- 3 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-[56px] h-[56px] bg-primary/10 border border-primary/20 rounded-[14px] flex items-center justify-center text-[26px]">
+            🎬
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">HD Projection</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            High-definition large-format screen. Every frame sharp, bright, and vivid.
+          </p>
+        </div>
+        <!-- 4 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-[56px] h-[56px] bg-primary/10 border border-primary/20 rounded-[14px] flex items-center justify-center text-[26px]">
+            🍿
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">Snacks & Concessions</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            Hot popcorn, cold drinks, and your favourite cinema snacks at the counter.
+          </p>
+        </div>
+        <!-- 5 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-14 h-14 rounded-[14px] bg-primary/10 border border-primary/20 flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6 text-primary/70"></i>
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">Family-Friendly Shows</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            Morning and matinee shows safe and welcoming for families of all ages.
+          </p>
+        </div>
+        <!-- 6 -->
+        <div class="feature-card tilt-card glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col items-start">
+          <div class="w-[56px] h-[56px] bg-primary/10 border border-primary/20 rounded-[14px] flex items-center justify-center text-[26px]">
+            🎟️
+          </div>
+          <h3 class="text-lg font-bold font-sans text-white mt-5">Affordable Tickets</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-2.5">
+            Multiplex-quality experience at local prices. Great cinema for everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 THE VENUE / GALLERY — REDESIGN -->
+  <section class="py-[60px] lg:py-[100px] bg-[#070708] relative z-20">
+    <div class="content-container">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-anton tracking-wide text-white uppercase">THE VENUE</h2>
+        <div class="w-12 h-[3px] bg-primary mx-auto my-3.5 rounded-full"></div>
+        <p class="text-text-secondary max-w-[500px] mx-auto text-sm md:text-base leading-relaxed">
+          A sneak peek inside our newly renovated theater lobby, screens, and seating spaces.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="bento-grid">
+        <!-- Main Cell (60% width, ~420px height) -->
+        <div class="bento-main h-[420px] bento-item">
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800" alt="Main Auditorium Screen">
+          <div class="bento-overlay"></div>
+          <span class="absolute bottom-6 left-6 text-white font-bold text-sm tracking-widest uppercase font-mono z-10">Main Auditorium</span>
+        </div>
+
+        <!-- Right Column (40% width, side layout with 2 items) -->
+        <div class="bento-side">
+          <div class="h-[202px] bento-item">
+            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&q=80&w=800" alt="Comfort Seating">
+            <div class="bento-overlay"></div>
+            <span class="absolute bottom-6 left-6 text-white font-bold text-sm tracking-widest uppercase font-mono z-10">Comfort Seating & Acoustics</span>
+          </div>
+          <div class="h-[202px] bento-item">
+            <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&q=80&w=800" alt="Concession stand">
+            <div class="bento-overlay"></div>
+            <span class="absolute bottom-6 left-6 text-white font-bold text-sm tracking-widest uppercase font-mono z-10">Concession Snackbar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/gallery.html" class="inline-flex items-center gap-2 bg-transparent hover:bg-white/[0.05] border border-white/20 hover:border-white/50 text-white font-bold py-3.5 px-10 rounded-[10px] transition-colors">
+          View Full Gallery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 WHAT GOLA IS SAYING — TESTIMONIALS -->
+  <section class="py-[60px] lg:py-[100px] bg-[#0F0F11] border-y border-white/5 relative z-20">
+    <div class="content-container">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-anton tracking-wide text-white uppercase">WHAT GOLA IS SAYING</h2>
+        <div class="w-12 h-[3px] bg-primary mx-auto my-3.5 rounded-full"></div>
+        <p class="text-text-secondary max-w-[500px] mx-auto text-sm md:text-base leading-relaxed">
+          Read direct feedback from local cinema lovers who have visited the reborn theater.
+        </p>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper testimonials-swiper pb-12">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col justify-between h-auto">
+            <div>
+              <div class="flex gap-1 text-accent mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-text-secondary italic text-sm leading-relaxed mb-6 font-sans">
+                "Finally! We don't have to travel to Gorakhpur city for a proper cinema experience. Sharda Cineplex is right in our neighborhood, and it is fantastic!"
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-white text-sm">— Amit Singh</p>
+              <p class="text-xs text-text-muted">Local Gola Resident</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col justify-between h-auto">
+            <div>
+              <div class="flex gap-1 text-accent mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-text-secondary italic text-sm leading-relaxed mb-6 font-sans">
+                "The new seating is so comfortable, and the cooling works really well. Took my parents and kids for a Sunday afternoon screening. We loved it!"
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-white text-sm">— Rekha Mishra</p>
+              <p class="text-xs text-text-muted">Family Visitor</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide glow-card bg-bg-card rounded-2xl p-8 text-left flex flex-col justify-between h-auto">
+            <div>
+              <div class="flex gap-1 text-accent mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-text-muted">★</span>
+              </div>
+              <p class="text-text-secondary italic text-sm leading-relaxed mb-6 font-sans">
+                "Super affordable tickets compared to mall theatres, and the sound quality is top-tier. Great space to hang out with friends in Gola Bazar."
+              </p>
+            </div>
+            <div>
+              <p class="font-bold text-white text-sm">— Rahul Yaduvanshi</p>
+              <p class="text-xs text-text-muted">Regular Moviegoer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 FAQ ACCORDION SECTION — FULL REBUILD -->
+  <section id="faq" class="py-[60px] lg:py-[100px] bg-[#0F0F11] relative z-20">
+    <div class="content-container">
+      <div class="max-w-[780px] mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-anton tracking-wide text-white uppercase">FREQUENTLY ASKED QUESTIONS</h2>
+          <div class="w-12 h-[3px] bg-primary mx-auto my-3.5 rounded-full"></div>
+        </div>
+
+        <!-- Accordion Wrappers (ALL 8 items rendered) -->
+        <div class="flex flex-col gap-2.5">
+          <!-- 1 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>Where is Sharda Cineplex located?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Main Market Road, Gola Bazar, Gorakhpur, UP – 273408. Right in the heart of Main Market — easy to reach from anywhere in Gola!
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>What are your show timings?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                We run 4–5 shows daily: Morning (10AM), Matinee (1PM), Evening (4PM), Night (7PM), and Late Night (10PM).
+              </p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>How can I book tickets?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Click any 'Book on BookMyShow' button on our website. You can also walk in and book at our counter daily from 9AM onwards.
+              </p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>What movies are currently showing?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Currently showing: Chhaava, Sky Force, and Sikandar. Follow @shardacineplex on Instagram for weekly updates.
+              </p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>Are snacks and food available?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Yes! Our concession counter serves fresh hot popcorn, cold drinks, samosas, and favourite cinema snacks at affordable prices.
+              </p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>Is parking available?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Street parking is available near Main Market, Gola Bazar. Easily accessible by auto-rickshaw and e-rickshaw.
+              </p>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>Do you screen Bhojpuri and regional films?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Absolutely! Along with Bollywood, we regularly screen Bhojpuri and other regional films for our local community.
+              </p>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="faq-accordion-item glow-card bg-[#16161A] rounded-xl overflow-hidden transition-all duration-300">
+            <button class="faq-accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none font-bold text-white text-sm sm:text-base font-sans cursor-pointer select-none">
+              <span>What are your contact numbers?</span>
+              <span class="faq-accordion-icon text-primary text-2xl font-bold font-sans transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+              <p class="px-6 pb-5 text-sm text-text-secondary leading-relaxed border-t border-white/[0.06] pt-4 font-sans">
+                Reach us at: 09651249244 | 07236002626 | 09936139513 | 09329686052. Available daily 9AM – 11PM.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 CONTACT SECTION — REDESIGN -->
+  <section class="py-[60px] lg:py-[100px] bg-[#070708] relative z-20">
+    <div class="content-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Details Cards -->
+        <div class="text-left space-y-6">
+          <div class="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-4 py-1.5">
+            <span class="pulsing-dot"></span>
+            <span class="text-[11px] font-bold tracking-[2px] uppercase text-primary font-sans">Visit Us</span>
+          </div>
+          <h2 class="text-5xl md:text-[64px] font-anton text-white tracking-wide uppercase leading-none">
+            COME WATCH WITH US
+          </h2>
+          <div class="w-12 h-[3px] bg-primary rounded-full"></div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 tilt-card-container">
+            <!-- Card 1 Address -->
+            <div class="bg-[#16161A] tilt-card glow-card rounded-xl p-6 flex flex-col gap-2">
+              <span class="text-primary text-lg">📍</span>
+              <h4 class="font-bold text-white text-sm font-sans">Address</h4>
+              <p class="text-text-secondary text-xs leading-relaxed font-sans">
+                Main Market, Gola Bazar, Gorakhpur UP – 273408
+              </p>
+              <a
+                href="https://www.google.com/maps/place/Sharda+Chitra+Mandir/@26.5849438,83.1426667"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm font-bold
+                       font-sans text-white border border-white/15
+                       hover:border-primary hover:text-primary
+                       px-5 py-3 rounded-xl transition-all duration-300
+                       w-full justify-center mt-2"
+              >
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+                Open in Google Maps
+              </a>
+            </div>
+            <!-- Card 2 Phones -->
+            <div class="bg-[#16161A] tilt-card glow-card rounded-xl p-6 flex flex-col gap-2">
+              <span class="text-primary text-lg">📞</span>
+              <h4 class="font-bold text-white text-sm font-sans">Phones</h4>
+              <div class="flex flex-col gap-1 text-xs text-accent font-mono">
+                <a href="tel:09651249244" class="hover:underline">09651249244</a>
+                <a href="tel:07236002626" class="hover:underline">07236002626</a>
+                <a href="tel:09936139513" class="hover:underline">09936139513</a>
+                <a href="tel:09329686052" class="hover:underline">09329686052</a>
+              </div>
+            </div>
+            <!-- Card 3 Hours -->
+            <div class="bg-[#16161A] tilt-card glow-card rounded-xl p-6 flex flex-col gap-2">
+              <span class="text-primary text-lg">⏰</span>
+              <h4 class="font-bold text-white text-sm font-sans">Hours</h4>
+              <p class="text-text-secondary text-xs leading-relaxed font-sans">
+                Monday–Sunday, 9:00 AM – 11:00 PM
+              </p>
+            </div>
+            <!-- Card 4 Instagram -->
+            <div class="bg-[#16161A] tilt-card glow-card rounded-xl p-6 flex flex-col gap-2">
+              <span class="text-primary text-lg">📸</span>
+              <h4 class="font-bold text-white text-sm font-sans">Instagram</h4>
+              <a href="https://www.instagram.com/shardacineplex/" target="_blank" rel="noopener noreferrer" class="text-accent text-xs hover:underline font-sans">
+                @shardacineplex
+              </a>
+            </div>
+          </div>
+
+          <!-- Action buttons below cards -->
+          <div class="pt-6 flex flex-wrap gap-3">
+            <a href="tel:09651249244" class="bg-transparent hover:bg-white/[0.05] border border-white/20 hover:border-white/50 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-xs uppercase tracking-wider">
+              📞 Call Now
+            </a>
+            <a href="https://wa.me/919651249244" target="_blank" rel="noopener noreferrer" class="bg-transparent hover:bg-white/[0.05] border border-white/20 hover:border-white/50 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-xs uppercase tracking-wider">
+              💬 WhatsApp
+            </a>
+            <a href="https://maps.google.com/maps?q=Sharda+Cinema+Gola+Gorakhpur" target="_blank" rel="noopener noreferrer" class="bg-transparent hover:bg-white/[0.05] border border-white/20 hover:border-white/50 text-white font-bold py-3.5 px-6 rounded-lg transition-colors text-xs uppercase tracking-wider">
+              📍 Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Maps -->
+        <div class="w-full">
+          <div class="relative w-full rounded-2xl overflow-hidden
+                      border border-white/[0.07] shadow-2xl
+                      ring-1 ring-white/5">
+
+            <!-- Map Label Badge -->
+            <div class="absolute top-4 left-4 z-10
+                        bg-[#0A0A0A]/90 backdrop-blur-sm
+                        border border-white/10 rounded-lg
+                        px-3 py-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary
+                           animate-pulse inline-block"></span>
+              <span class="text-white text-xs font-bold
+                           font-sans tracking-wide">
+                Sharda Cineplex, Gola Bazar
+              </span>
+            </div>
+
+            <!-- Google Maps iframe -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441144.80028914235!2d83.14266667946714!3d26.58494375813109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399176bbca64598b%3A0xf5d26e8b72551c2!2sSharda+Chitra+Mandir!5e0!3m2!1sen!2sin!4v1780903175769!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style="border:0; filter: invert(90%) hue-rotate(180deg);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sharda Cineplex Location"
+            ></iframe>
+
+            <!-- Get Directions Button overlay at bottom -->
+            <div class="absolute bottom-4 right-4 z-10">
+              <a
+                href="https://www.google.com/maps/place/Sharda+Chitra+Mandir/@26.5849438,83.1426667"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-primary hover:bg-primary-dark text-white
+                       text-xs font-bold font-sans px-4 py-2.5
+                       rounded-lg flex items-center gap-2
+                       transition-all duration-300 hover:scale-105
+                       shadow-lg"
+              >
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🍿 FOOTER — REDESIGN -->
+  <footer class="bg-[#0A0A0A] border-t border-white/[0.06] pt-12 pb-6 relative z-20">
+    <div class="content-container">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mb-12">
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <!-- Logo identical to nav -->
+          <a href="/" class="flex items-center gap-2.5 group">
+            <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white">
+              <span class="text-sm">🎬</span>
+            </div>
+            <div class="leading-none">
+              <span class="text-lg font-anton tracking-wide text-white block uppercase">SHARDA</span>
+              <span class="text-[8px] block text-primary font-bold tracking-[3px] uppercase mt-0.5">CINEPLEX</span>
+            </div>
+          </a>
+          <p class="text-text-muted text-xs leading-relaxed max-w-[280px]">
+            Gola Bazar's Premier Cinema Experience
+          </p>
+          <!-- Instagram icon -->
+          <a href="https://www.instagram.com/shardacineplex/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-white transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4 text-primary"></i>
+            <span>@shardacineplex</span>
+          </a>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-bold text-[#555] tracking-[2px] uppercase font-sans">Quick Links</h4>
+          <ul class="grid grid-cols-2 gap-2 text-xs font-semibold text-text-secondary">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/now-showing.html" class="hover:text-white transition-colors">Now Showing</a></li>
+            <li><a href="/showtimes.html" class="hover:text-white transition-colors">Showtimes</a></li>
+            <li><a href="/about.html" class="hover:text-white transition-colors">Our Legacy</a></li>
+            <li><a href="/gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+            <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-bold text-[#555] tracking-[2px] uppercase font-sans">Contact</h4>
+          <div class="text-xs text-text-secondary space-y-2 leading-relaxed">
+            <div class="flex flex-col font-mono text-accent">
+              <a href="tel:09651249244" class="hover:underline">09651249244</a>
+              <a href="tel:07236002626" class="hover:underline">07236002626</a>
+            </div>
+            <p>Main Market Road, Gola Bazar, Gorakhpur, UP</p>
+            <p class="text-text-muted text-[11px]">Daily: 9:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="pt-8 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between text-xs text-[#555555]">
+        <p>© 2026 Sharda Cineplex. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Made with ❤️ for Gola Bazar</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🍿 FLOATING ELEMENTS -->
+  <!-- WhatsApp Fixed CTA -->
+  <a href="https://wa.me/919651249244" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] hover:scale-105 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-[999] transition-transform duration-300" style="animation: pulse 2s infinite;" aria-label="Contact WhatsApp">
+    <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.66.986 3.285 1.503 5.34 1.505 5.575 0 10.118-4.516 10.12-10.066.002-2.688-1.043-5.216-2.946-7.12-1.902-1.904-4.43-2.951-7.126-2.952-5.582 0-10.125 4.516-10.128 10.068-.001 2.07.54 4.08 1.565 5.867L1.998 22.1l5.857-1.535l-.04.025zm11.758-7.79c-.31-.154-1.83-.9-2.11-.998-.28-.1-.485-.15-.69.154-.203.308-.79.997-.97 1.205-.18.205-.357.228-.667.074-1.05-.525-1.812-.916-2.528-2.146-.62-1.07-.9-1.636-1.077-1.942-.178-.308-.02-.47.135-.623.14-.136.31-.358.463-.538.15-.178.203-.306.304-.51.1-.205.05-.383-.025-.536-.076-.154-.69-1.66-.945-2.27-.248-.597-.5-.516-.69-.526-.178-.008-.383-.01-.587-.01-.204 0-.536.077-.817.384-.28.307-1.073 1.05-1.073 2.56 0 1.51 1.1 2.97 1.25 3.177.153.205 2.164 3.31 5.244 4.634.733.315 1.306.503 1.753.644.736.233 1.407.2 1.937.12.59-.09 1.83-.746 2.088-1.432.257-.686.257-1.275.18-1.396-.076-.12-.28-.194-.59-.348z"/>
+    </svg>
+  </a>
+
+  <!-- Scroll-to-top Button -->
+  <button id="back-to-top" class="fixed bottom-24 right-7 bg-white/[0.08] hover:bg-white/[0.12] border border-white/10 hover:border-white/20 w-11 h-11 rounded-full text-white flex items-center justify-center shadow-2xl cursor-pointer opacity-0 pointer-events-none transition-all duration-300 z-40 hover:-translate-y-1" aria-label="Back to Top">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Mobile sticky bottom bar -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#070708]/95 border-t border-white/[0.08] backdrop-blur-md p-3 flex gap-3 h-16">
+    <a href="tel:09651249244" class="w-1/4 bg-[#16161A] hover:bg-[#1C1C22] text-white py-3 rounded-lg text-center flex items-center justify-center border border-white/10">
+      <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+    </a>
+    <a href="https://in.bookmyshow.com/explore/movies-gorakhpur" target="_blank" rel="noopener noreferrer" class="w-3/4 bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+      🎟️ BOOK ON BMS
+    </a>
+  </div>
+
+  <!-- Lucide Icon Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
